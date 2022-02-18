@@ -3,7 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+<<<<<<< Updated upstream
         <entry key="..\:/Documents/SFU/Spring 2022/IAT359/van-animal-control/app/src/main/res/layout/activity_main.xml" value="0.2791666666666667" />
+=======
+        <entry key="..\:/IAT359/van-animal-control/app/src/main/res/layout/activity_main.xml" value="0.2558876811594203" />
+>>>>>>> Stashed changes
       </map>
     </option>
   </component>
