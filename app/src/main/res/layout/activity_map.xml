@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:background="#FFFFFF"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <FrameLayout
+            android:layout_width="350dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center">
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|top|left"
+                android:layout_marginTop="20dp"
+                android:text="TextView"
+                android:textAlignment="textStart"
+                android:textSize="24dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:text="GET DIRECTIONS" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|left"
+                android:layout_marginBottom="10dp"
+                app:srcCompat="@android:drawable/btn_star" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="100dp"
+                android:layout_height="32dp"
+                android:layout_gravity="right|top"
+                android:layout_marginTop="24dp"
+                app:srcCompat="@drawable/heart_icon" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="350dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center">
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed ante in turpis finibus finibus vitae ut tellus. Sed volutpat, ipsum quis egestas sodales, nulla quam ultricies purus, sed venenatis sem sapien vitae est. Integer ex neque, auctor ac semper non, semper luctus urna. " />
+        </FrameLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
