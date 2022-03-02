@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFE9DA"
+    android:visibility="visible"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -76,6 +77,12 @@
             android:paddingRight="16sp"
             android:paddingBottom="16sp">
 
+            <Button
+                android:id="@+id/adopt_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="invisible" />
+
             <ImageView
                 android:id="@+id/imageViewAdopt"
                 android:layout_width="wrap_content"
@@ -94,7 +101,8 @@
                 android:paddingBottom="16dp"
                 android:text="Adopt a Pet"
                 android:textColor="#EBEBEB"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:visibility="visible" />
 
         </FrameLayout>
 
@@ -105,6 +113,13 @@
             android:paddingLeft="16sp"
             android:paddingRight="16sp"
             android:paddingBottom="16sp">
+
+            <Button
+                android:id="@+id/learn_pet_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Button"
+                android:visibility="invisible" />
 
             <ImageView
                 android:id="@+id/imageViewLearn"
@@ -134,6 +149,13 @@
             android:paddingLeft="16sp"
             android:paddingRight="16sp"
             android:paddingBottom="16sp">
+
+            <Button
+                android:id="@+id/find_shelter_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Button"
+                android:visibility="invisible" />
 
             <ImageView
                 android:id="@+id/imageViewFind"
