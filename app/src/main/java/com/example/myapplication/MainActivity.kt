@@ -32,21 +32,21 @@ class MainActivity : AppCompatActivity() {
 //        binding.homeFrame2.setOnClickListener(this)
 //        binding.homeFrame3.setOnClickListener(this)
 
-        val button1 = findViewById<Button>(R.id.adopt_button)
-        button1.setOnClickListener{
-            val intent = Intent(this, InventoryActivity::class.java)
-            startActivity(intent)
-        }
-        val button2 = findViewById<Button>(R.id.learn_pet_button)
-        button2.setOnClickListener{
-            val intent = Intent(this, PrepActivity::class.java)
-            startActivity(intent)
-        }
-        val button3 = findViewById<Button>(R.id.find_shelter_button)
-        button3.setOnClickListener{
-            val intent = Intent(this, MapActivity::class.java)
-            startActivity(intent)
-        }
+//        val button1 = findViewById<Button>(R.id.adopt_button)
+//        button1.setOnClickListener{
+//            val intent = Intent(this, InventoryActivity::class.java)
+//            startActivity(intent)
+//        }
+//        val button2 = findViewById<Button>(R.id.learn_pet_button)
+//        button2.setOnClickListener{
+//            val intent = Intent(this, PrepActivity::class.java)
+//            startActivity(intent)
+//        }
+//        val button3 = findViewById<Button>(R.id.find_shelter_button)
+//        button3.setOnClickListener{
+//            val intent = Intent(this, MapActivity::class.java)
+//            startActivity(intent)
+//        }
 
     }
 //
