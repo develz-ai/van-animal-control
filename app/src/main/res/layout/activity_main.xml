@@ -73,9 +73,10 @@
             android:id="@+id/homeFrame1"
             android:layout_width="match_parent"
             android:layout_height="120sp"
-            android:paddingLeft="16sp"
-            android:paddingRight="16sp"
-            android:paddingBottom="16sp">
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/roundstyle">
 
             <Button
                 android:id="@+id/adopt_button"
@@ -111,9 +112,9 @@
             android:id="@+id/homeFrame2"
             android:layout_width="match_parent"
             android:layout_height="120sp"
-            android:paddingLeft="16sp"
-            android:paddingRight="16sp"
-            android:paddingBottom="16sp">
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp">
 
             <Button
                 android:id="@+id/learn_pet_button"
@@ -148,9 +149,9 @@
             android:id="@+id/homeFrame3"
             android:layout_width="match_parent"
             android:layout_height="120sp"
-            android:paddingLeft="16sp"
-            android:paddingRight="16sp"
-            android:paddingBottom="16sp">
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp">
 
             <Button
                 android:id="@+id/find_shelter_button"

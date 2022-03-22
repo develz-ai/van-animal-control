@@ -16,6 +16,12 @@
             android:name=".InventoryActivity"
             android:exported="false" />
         <activity
+            android:name=".PrepActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MapActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
