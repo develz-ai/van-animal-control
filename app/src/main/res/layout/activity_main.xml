@@ -11,7 +11,7 @@
     <LinearLayout
         android:id="@+id/bannerLayout_id"
         android:layout_width="match_parent"
-        android:layout_height="230dp"
+        android:layout_height="260dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,14 +33,14 @@
             <LinearLayout
                 android:id="@+id/linearBanner"
                 android:layout_width="270dp"
-                android:layout_height="210dp"
+                android:layout_height="230dp"
                 android:orientation="vertical"
                 android:paddingLeft="16sp">
 
                 <TextView
                     android:id="@+id/textBanner1"
                     android:layout_width="match_parent"
-                    android:layout_height="185dp"
+                    android:layout_height="200dp"
                     android:fontFamily="sans-serif-black"
                     android:gravity="bottom|left"
                     android:text="Find your Perfect Pet Today!"
@@ -87,6 +87,7 @@
                 android:id="@+id/imageViewAdopt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/roundstyle"
                 android:scaleType="centerCrop"
                 android:tint="#66000000"
                 app:srcCompat="@drawable/cat_adopt" />
@@ -125,6 +126,7 @@
                 android:id="@+id/imageViewLearn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/roundstyle"
                 android:scaleType="centerCrop"
                 app:srcCompat="@drawable/dog_banner" />
 
@@ -161,6 +163,7 @@
                 android:id="@+id/imageViewFind"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/roundstyle"
                 android:scaleType="centerCrop"
                 app:srcCompat="@drawable/dog_banner" />
 
