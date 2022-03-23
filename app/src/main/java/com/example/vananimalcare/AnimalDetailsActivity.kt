@@ -1,11 +1,11 @@
-package com.example.myapplication
+package com.example.vananimalcare
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
-class MapActivity : AppCompatActivity() {
+class AnimalDetailsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_map)
+        setContentView(R.layout.activity_animal_details)
     }
 }

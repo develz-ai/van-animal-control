@@ -1,10 +1,9 @@
-package com.example.myapplication
+package com.example.vananimalcare
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import com.example.myapplication.databinding.ActivityInventoryBinding
+import com.example.vananimalcare.databinding.ActivityInventoryBinding
 
 class InventoryActivity : AppCompatActivity() {
 
