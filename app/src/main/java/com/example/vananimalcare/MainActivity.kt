@@ -17,6 +17,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         val view = binding.root
         setContentView(view)
+        println("start")
+
+
 
 //        binding.homeFrame1.setOnClickListener(this)
 //        binding.homeFrame2.setOnClickListener(this)
