@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.vananimalcare">
-
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
@@ -17,7 +16,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
-
+        <activity
+            android:name=".animalListActivity"
+            android:exported="false" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -31,19 +32,19 @@
             android:value="AIzaSyB276IfTfNPImBpSKy0m0DKrBHjYwMRGAc" />
 
         <activity
-            android:name="com.example.vananimalcare.AnimalDetailsActivity"
+            android:name=".AnimalDetailsActivity"
             android:exported="false" />
         <activity
-            android:name="com.example.vananimalcare.InventoryActivity"
+            android:name=".InventoryActivity"
             android:exported="false" />
         <activity
-            android:name="com.example.vananimalcare.PrepActivity"
+            android:name=".PrepActivity"
             android:exported="false" />
         <activity
-            android:name="com.example.vananimalcare.MapActivity"
+            android:name=".MapActivity"
             android:exported="false" />
         <activity
-            android:name="com.example.vananimalcare.MainActivity"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

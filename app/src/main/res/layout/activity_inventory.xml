@@ -151,497 +151,507 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="450dp"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/animalList"
+        android:layout_width="409dp"
+        android:layout_height="550dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inventoryDivider">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:id="@+id/inventoryRow1"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:orientation="horizontal"
-                android:paddingStart="8dp"
-                android:paddingEnd="8dp">
-
-                <FrameLayout
-                    android:id="@+id/animal1"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:paddingStart="8dp"
-                    android:paddingTop="8dp"
-                    android:paddingEnd="8dp"
-                    android:paddingBottom="8dp">
-
-                    <View
-                        android:id="@+id/animal1View"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="#7E593E" />
-
-                    <LinearLayout
-                        android:id="@+id/animalText1"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="0"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:id="@+id/animalName1"
-                            android:layout_width="match_parent"
-                            android:layout_height="49dp"
-                            android:fontFamily="sans-serif-black"
-                            android:gravity="bottom"
-                            android:paddingLeft="16dp"
-                            android:text="PETER"
-                            android:textColor="#EBEBEB"
-                            android:textSize="24sp" />
-
-                        <TextView
-                            android:id="@+id/animalType1"
-                            android:layout_width="match_parent"
-                            android:layout_height="72dp"
-                            android:paddingLeft="16dp"
-                            android:text="Dog - Male"
-                            android:textColor="#EBEBEB" />
-
-                        <LinearLayout
-                            android:id="@+id/animalText1b"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                android:id="@+id/animalBreed1"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:gravity="left|center_vertical"
-                                android:paddingLeft="16dp"
-                                android:paddingBottom="8dp"
-                                android:text="Beagle"
-                                android:textColor="#EBEBEB"
-                                android:textSize="18sp" />
-
-                            <ImageView
-                                android:id="@+id/heart1"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_weight="3"
-                                android:foregroundGravity="left"
-                                android:paddingRight="16dp"
-                                android:paddingBottom="8dp"
-                                app:srcCompat="@drawable/heart_icon" />
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                </FrameLayout>
-
-                <FrameLayout
-                    android:id="@+id/animal2"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:paddingStart="8dp"
-                    android:paddingTop="8dp"
-                    android:paddingEnd="8dp"
-                    android:paddingBottom="8dp">
-
-                    <View
-                        android:id="@+id/animal2View"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="#FDD6B2" />
-
-                    <LinearLayout
-                        android:id="@+id/animalText2"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="0"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:id="@+id/animalName2"
-                            android:layout_width="match_parent"
-                            android:layout_height="49dp"
-                            android:fontFamily="sans-serif-black"
-                            android:gravity="bottom"
-                            android:paddingLeft="16dp"
-                            android:text="BOB"
-                            android:textColor="#3F3F3F"
-                            android:textSize="24sp" />
-
-                        <TextView
-                            android:id="@+id/animalType2"
-                            android:layout_width="match_parent"
-                            android:layout_height="72dp"
-                            android:paddingLeft="16dp"
-                            android:text="Cat - Male"
-                            android:textColor="#3F3F3F" />
-
-                        <LinearLayout
-                            android:id="@+id/animalText2b"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                android:id="@+id/animalBreed2"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:gravity="left|center_vertical"
-                                android:paddingLeft="16dp"
-                                android:paddingBottom="8dp"
-                                android:text="Persian"
-                                android:textColor="#3F3F3F"
-                                android:textSize="18sp" />
-
-                            <ImageView
-                                android:id="@+id/heart2"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_weight="3"
-                                android:foregroundGravity="left"
-                                android:paddingRight="16dp"
-                                android:paddingBottom="8dp"
-                                app:srcCompat="@drawable/heart_icon_empty" />
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-                </FrameLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/inventoryRow2"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:orientation="horizontal"
-                android:paddingStart="8dp"
-                android:paddingEnd="8dp">
-
-                <FrameLayout
-                    android:id="@+id/animal3"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:paddingStart="8dp"
-                    android:paddingTop="8dp"
-                    android:paddingEnd="8dp"
-                    android:paddingBottom="8dp">
-
-                    <View
-                        android:id="@+id/animal3View"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="#FDD6B2" />
-
-                    <LinearLayout
-                        android:id="@+id/animalText3"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="0"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:id="@+id/animalName3"
-                            android:layout_width="match_parent"
-                            android:layout_height="49dp"
-                            android:fontFamily="sans-serif-black"
-                            android:gravity="bottom"
-                            android:paddingLeft="16dp"
-                            android:text="SAM"
-                            android:textColor="#3F3F3F"
-                            android:textSize="24sp" />
-
-                        <TextView
-                            android:id="@+id/animalType3"
-                            android:layout_width="match_parent"
-                            android:layout_height="72dp"
-                            android:paddingLeft="16dp"
-                            android:text="Dog - Male (N)"
-                            android:textColor="#3F3F3F" />
-
-                        <LinearLayout
-                            android:id="@+id/animalText3b"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                android:id="@+id/animalBreed3"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:gravity="left|center_vertical"
-                                android:paddingLeft="16dp"
-                                android:paddingBottom="8dp"
-                                android:text="Golden Retriever"
-                                android:textColor="#3F3F3F"
-                                android:textSize="18sp" />
-
-                            <ImageView
-                                android:id="@+id/heart3"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_weight="3"
-                                android:foregroundGravity="left"
-                                android:paddingRight="16dp"
-                                android:paddingBottom="8dp"
-                                app:srcCompat="@drawable/heart_icon_empty" />
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                </FrameLayout>
-
-                <FrameLayout
-                    android:id="@+id/animal4"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:paddingStart="8dp"
-                    android:paddingTop="8dp"
-                    android:paddingEnd="8dp"
-                    android:paddingBottom="8dp">
-
-                    <View
-                        android:id="@+id/animal4View"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="#7E593E" />
-
-                    <LinearLayout
-                        android:id="@+id/animalText4"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="0"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:id="@+id/animalName4"
-                            android:layout_width="match_parent"
-                            android:layout_height="49dp"
-                            android:fontFamily="sans-serif-black"
-                            android:gravity="bottom"
-                            android:paddingLeft="16dp"
-                            android:text="CHARLES"
-                            android:textColor="#EBEBEB"
-                            android:textSize="24sp" />
-
-                        <TextView
-                            android:id="@+id/animalType4"
-                            android:layout_width="match_parent"
-                            android:layout_height="72dp"
-                            android:paddingLeft="16dp"
-                            android:text="Cat - Male (N)"
-                            android:textColor="#EBEBEB" />
-
-                        <LinearLayout
-                            android:id="@+id/animalText4b"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                android:id="@+id/animalBreed4"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:gravity="left|center_vertical"
-                                android:paddingLeft="16dp"
-                                android:paddingBottom="8dp"
-                                android:text="British Shorthair"
-                                android:textColor="#EBEBEB"
-                                android:textSize="18sp" />
-
-                            <ImageView
-                                android:id="@+id/heart4"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_weight="3"
-                                android:foregroundGravity="left"
-                                android:paddingRight="16dp"
-                                android:paddingBottom="8dp"
-                                app:srcCompat="@drawable/heart_icon" />
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-                </FrameLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/inventoryRow3"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:orientation="horizontal"
-                android:paddingStart="8dp"
-                android:paddingEnd="8dp">
-
-                <FrameLayout
-                    android:id="@+id/animal5"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:paddingStart="8dp"
-                    android:paddingTop="8dp"
-                    android:paddingEnd="8dp"
-                    android:paddingBottom="8dp">
-
-                    <View
-                        android:id="@+id/animal5View"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="#E9977D" />
-
-                    <LinearLayout
-                        android:id="@+id/animalText5"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="0"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:id="@+id/animalName5"
-                            android:layout_width="match_parent"
-                            android:layout_height="49dp"
-                            android:fontFamily="sans-serif-black"
-                            android:gravity="bottom"
-                            android:paddingLeft="16dp"
-                            android:text="CHLOE"
-                            android:textColor="#EBEBEB"
-                            android:textSize="24sp" />
-
-                        <TextView
-                            android:id="@+id/animalType5"
-                            android:layout_width="match_parent"
-                            android:layout_height="72dp"
-                            android:paddingLeft="16dp"
-                            android:text="Dog - Female"
-                            android:textColor="#EBEBEB" />
-
-                        <LinearLayout
-                            android:id="@+id/animalText5b"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                android:id="@+id/animalBreed5"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:gravity="left|center_vertical"
-                                android:paddingLeft="16dp"
-                                android:paddingBottom="8dp"
-                                android:text="Shiba Inu"
-                                android:textColor="#EBEBEB"
-                                android:textSize="18sp" />
-
-                            <ImageView
-                                android:id="@+id/heart5"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_weight="3"
-                                android:foregroundGravity="left"
-                                android:paddingRight="16dp"
-                                android:paddingBottom="8dp"
-                                app:srcCompat="@drawable/heart_icon" />
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                </FrameLayout>
-
-                <FrameLayout
-                    android:id="@+id/animal6"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:paddingStart="8dp"
-                    android:paddingTop="8dp"
-                    android:paddingEnd="8dp"
-                    android:paddingBottom="8dp">
-
-                    <View
-                        android:id="@+id/animal6View"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="#F0CBDD" />
-
-                    <LinearLayout
-                        android:id="@+id/animalText6"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="0"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:id="@+id/animalName6"
-                            android:layout_width="match_parent"
-                            android:layout_height="49dp"
-                            android:fontFamily="sans-serif-black"
-                            android:gravity="bottom"
-                            android:paddingLeft="16dp"
-                            android:text="MUMMY"
-                            android:textColor="#3F3F3F"
-                            android:textSize="24sp" />
-
-                        <TextView
-                            android:id="@+id/animalType6"
-                            android:layout_width="match_parent"
-                            android:layout_height="72dp"
-                            android:paddingLeft="16dp"
-                            android:text="Cat - Female (S)"
-                            android:textColor="#3F3F3F" />
-
-                        <LinearLayout
-                            android:id="@+id/animalText6b"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                android:id="@+id/animalBreed6"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:gravity="left|center_vertical"
-                                android:paddingLeft="16dp"
-                                android:paddingBottom="8dp"
-                                android:text="Sphynx"
-                                android:textColor="#3F3F3F"
-                                android:textSize="18sp" />
-
-                            <ImageView
-                                android:id="@+id/heart6"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_weight="3"
-                                android:foregroundGravity="left"
-                                android:paddingRight="16dp"
-                                android:paddingBottom="8dp"
-                                app:srcCompat="@drawable/heart_icon_empty" />
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-                </FrameLayout>
-            </LinearLayout>
-        </LinearLayout>
-    </ScrollView>
+        app:layout_constraintTop_toTopOf="@+id/inventoryDivider"
+        tools:listitem="@layout/animal_item" />
+
+<!--    <ScrollView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="450dp"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/inventoryDivider">-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="vertical">-->
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/inventoryRow1"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="200dp"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:paddingStart="8dp"-->
+<!--                android:paddingEnd="8dp">-->
+
+<!--                <FrameLayout-->
+<!--                    android:id="@+id/animal1"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:paddingStart="8dp"-->
+<!--                    android:paddingTop="8dp"-->
+<!--                    android:paddingEnd="8dp"-->
+<!--                    android:paddingBottom="8dp">-->
+
+<!--                    <View-->
+<!--                        android:id="@+id/animal1View"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:background="#7E593E" />-->
+
+<!--                    <LinearLayout-->
+<!--                        android:id="@+id/animalText1"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:layout_weight="0"-->
+<!--                        android:orientation="vertical">-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/animalName1"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="49dp"-->
+<!--                            android:fontFamily="sans-serif-black"-->
+<!--                            android:gravity="bottom"-->
+<!--                            android:paddingLeft="16dp"-->
+<!--                            android:text="PETER"-->
+<!--                            android:textColor="#EBEBEB"-->
+<!--                            android:textSize="24sp" />-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/animalType1"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="72dp"-->
+<!--                            android:paddingLeft="16dp"-->
+<!--                            android:text="Dog - Male"-->
+<!--                            android:textColor="#EBEBEB" />-->
+
+<!--                        <LinearLayout-->
+<!--                            android:id="@+id/animalText1b"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:orientation="horizontal">-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/animalBreed1"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="match_parent"-->
+<!--                                android:layout_weight="1"-->
+<!--                                android:gravity="left|center_vertical"-->
+<!--                                android:paddingLeft="16dp"-->
+<!--                                android:paddingBottom="8dp"-->
+<!--                                android:text="Beagle"-->
+<!--                                android:textColor="#EBEBEB"-->
+<!--                                android:textSize="18sp" />-->
+
+<!--                            <ImageView-->
+<!--                                android:id="@+id/heart1"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="match_parent"-->
+<!--                                android:layout_weight="3"-->
+<!--                                android:foregroundGravity="left"-->
+<!--                                android:paddingRight="16dp"-->
+<!--                                android:paddingBottom="8dp"-->
+<!--                                app:srcCompat="@drawable/heart_icon" />-->
+
+<!--                        </LinearLayout>-->
+
+<!--                    </LinearLayout>-->
+
+<!--                </FrameLayout>-->
+
+<!--                <FrameLayout-->
+<!--                    android:id="@+id/animal2"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:paddingStart="8dp"-->
+<!--                    android:paddingTop="8dp"-->
+<!--                    android:paddingEnd="8dp"-->
+<!--                    android:paddingBottom="8dp">-->
+
+<!--                    <View-->
+<!--                        android:id="@+id/animal2View"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:background="#FDD6B2" />-->
+
+<!--                    <LinearLayout-->
+<!--                        android:id="@+id/animalText2"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:layout_weight="0"-->
+<!--                        android:orientation="vertical">-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/animalName2"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="49dp"-->
+<!--                            android:fontFamily="sans-serif-black"-->
+<!--                            android:gravity="bottom"-->
+<!--                            android:paddingLeft="16dp"-->
+<!--                            android:text="BOB"-->
+<!--                            android:textColor="#3F3F3F"-->
+<!--                            android:textSize="24sp" />-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/animalType2"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="72dp"-->
+<!--                            android:paddingLeft="16dp"-->
+<!--                            android:text="Cat - Male"-->
+<!--                            android:textColor="#3F3F3F" />-->
+
+<!--                        <LinearLayout-->
+<!--                            android:id="@+id/animalText2b"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:orientation="horizontal">-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/animalBreed2"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="match_parent"-->
+<!--                                android:layout_weight="1"-->
+<!--                                android:gravity="left|center_vertical"-->
+<!--                                android:paddingLeft="16dp"-->
+<!--                                android:paddingBottom="8dp"-->
+<!--                                android:text="Persian"-->
+<!--                                android:textColor="#3F3F3F"-->
+<!--                                android:textSize="18sp" />-->
+
+<!--                            <ImageView-->
+<!--                                android:id="@+id/heart2"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="match_parent"-->
+<!--                                android:layout_weight="3"-->
+<!--                                android:foregroundGravity="left"-->
+<!--                                android:paddingRight="16dp"-->
+<!--                                android:paddingBottom="8dp"-->
+<!--                                app:srcCompat="@drawable/heart_icon_empty" />-->
+
+<!--                        </LinearLayout>-->
+
+<!--                    </LinearLayout>-->
+<!--                </FrameLayout>-->
+<!--            </LinearLayout>-->
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/inventoryRow2"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="200dp"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:paddingStart="8dp"-->
+<!--                android:paddingEnd="8dp">-->
+
+<!--                <FrameLayout-->
+<!--                    android:id="@+id/animal3"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:paddingStart="8dp"-->
+<!--                    android:paddingTop="8dp"-->
+<!--                    android:paddingEnd="8dp"-->
+<!--                    android:paddingBottom="8dp">-->
+
+<!--                    <View-->
+<!--                        android:id="@+id/animal3View"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:background="#FDD6B2" />-->
+
+<!--                    <LinearLayout-->
+<!--                        android:id="@+id/animalText3"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:layout_weight="0"-->
+<!--                        android:orientation="vertical">-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/animalName3"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="49dp"-->
+<!--                            android:fontFamily="sans-serif-black"-->
+<!--                            android:gravity="bottom"-->
+<!--                            android:paddingLeft="16dp"-->
+<!--                            android:text="SAM"-->
+<!--                            android:textColor="#3F3F3F"-->
+<!--                            android:textSize="24sp" />-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/animalType3"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="72dp"-->
+<!--                            android:paddingLeft="16dp"-->
+<!--                            android:text="Dog - Male (N)"-->
+<!--                            android:textColor="#3F3F3F" />-->
+
+<!--                        <LinearLayout-->
+<!--                            android:id="@+id/animalText3b"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:orientation="horizontal">-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/animalBreed3"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="match_parent"-->
+<!--                                android:layout_weight="1"-->
+<!--                                android:gravity="left|center_vertical"-->
+<!--                                android:paddingLeft="16dp"-->
+<!--                                android:paddingBottom="8dp"-->
+<!--                                android:text="Golden Retriever"-->
+<!--                                android:textColor="#3F3F3F"-->
+<!--                                android:textSize="18sp" />-->
+
+<!--                            <ImageView-->
+<!--                                android:id="@+id/heart3"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="match_parent"-->
+<!--                                android:layout_weight="3"-->
+<!--                                android:foregroundGravity="left"-->
+<!--                                android:paddingRight="16dp"-->
+<!--                                android:paddingBottom="8dp"-->
+<!--                                app:srcCompat="@drawable/heart_icon_empty" />-->
+
+<!--                        </LinearLayout>-->
+
+<!--                    </LinearLayout>-->
+
+<!--                </FrameLayout>-->
+
+<!--                <FrameLayout-->
+<!--                    android:id="@+id/animal4"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:paddingStart="8dp"-->
+<!--                    android:paddingTop="8dp"-->
+<!--                    android:paddingEnd="8dp"-->
+<!--                    android:paddingBottom="8dp">-->
+
+<!--                    <View-->
+<!--                        android:id="@+id/animal4View"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:background="#7E593E" />-->
+
+<!--                    <LinearLayout-->
+<!--                        android:id="@+id/animalText4"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:layout_weight="0"-->
+<!--                        android:orientation="vertical">-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/animalName4"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="49dp"-->
+<!--                            android:fontFamily="sans-serif-black"-->
+<!--                            android:gravity="bottom"-->
+<!--                            android:paddingLeft="16dp"-->
+<!--                            android:text="CHARLES"-->
+<!--                            android:textColor="#EBEBEB"-->
+<!--                            android:textSize="24sp" />-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/animalType4"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="72dp"-->
+<!--                            android:paddingLeft="16dp"-->
+<!--                            android:text="Cat - Male (N)"-->
+<!--                            android:textColor="#EBEBEB" />-->
+
+<!--                        <LinearLayout-->
+<!--                            android:id="@+id/animalText4b"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:orientation="horizontal">-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/animalBreed4"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="match_parent"-->
+<!--                                android:layout_weight="1"-->
+<!--                                android:gravity="left|center_vertical"-->
+<!--                                android:paddingLeft="16dp"-->
+<!--                                android:paddingBottom="8dp"-->
+<!--                                android:text="British Shorthair"-->
+<!--                                android:textColor="#EBEBEB"-->
+<!--                                android:textSize="18sp" />-->
+
+<!--                            <ImageView-->
+<!--                                android:id="@+id/heart4"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="match_parent"-->
+<!--                                android:layout_weight="3"-->
+<!--                                android:foregroundGravity="left"-->
+<!--                                android:paddingRight="16dp"-->
+<!--                                android:paddingBottom="8dp"-->
+<!--                                app:srcCompat="@drawable/heart_icon" />-->
+
+<!--                        </LinearLayout>-->
+
+<!--                    </LinearLayout>-->
+<!--                </FrameLayout>-->
+<!--            </LinearLayout>-->
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/inventoryRow3"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="200dp"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:paddingStart="8dp"-->
+<!--                android:paddingEnd="8dp">-->
+
+<!--                <FrameLayout-->
+<!--                    android:id="@+id/animal5"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:paddingStart="8dp"-->
+<!--                    android:paddingTop="8dp"-->
+<!--                    android:paddingEnd="8dp"-->
+<!--                    android:paddingBottom="8dp">-->
+
+<!--                    <View-->
+<!--                        android:id="@+id/animal5View"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:background="#E9977D" />-->
+
+<!--                    <LinearLayout-->
+<!--                        android:id="@+id/animalText5"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:layout_weight="0"-->
+<!--                        android:orientation="vertical">-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/animalName5"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="49dp"-->
+<!--                            android:fontFamily="sans-serif-black"-->
+<!--                            android:gravity="bottom"-->
+<!--                            android:paddingLeft="16dp"-->
+<!--                            android:text="CHLOE"-->
+<!--                            android:textColor="#EBEBEB"-->
+<!--                            android:textSize="24sp" />-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/animalType5"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="72dp"-->
+<!--                            android:paddingLeft="16dp"-->
+<!--                            android:text="Dog - Female"-->
+<!--                            android:textColor="#EBEBEB" />-->
+
+<!--                        <LinearLayout-->
+<!--                            android:id="@+id/animalText5b"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:orientation="horizontal">-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/animalBreed5"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="match_parent"-->
+<!--                                android:layout_weight="1"-->
+<!--                                android:gravity="left|center_vertical"-->
+<!--                                android:paddingLeft="16dp"-->
+<!--                                android:paddingBottom="8dp"-->
+<!--                                android:text="Shiba Inu"-->
+<!--                                android:textColor="#EBEBEB"-->
+<!--                                android:textSize="18sp" />-->
+
+<!--                            <ImageView-->
+<!--                                android:id="@+id/heart5"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="match_parent"-->
+<!--                                android:layout_weight="3"-->
+<!--                                android:foregroundGravity="left"-->
+<!--                                android:paddingRight="16dp"-->
+<!--                                android:paddingBottom="8dp"-->
+<!--                                app:srcCompat="@drawable/heart_icon" />-->
+
+<!--                        </LinearLayout>-->
+
+<!--                    </LinearLayout>-->
+
+<!--                </FrameLayout>-->
+
+<!--                <FrameLayout-->
+<!--                    android:id="@+id/animal6"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:paddingStart="8dp"-->
+<!--                    android:paddingTop="8dp"-->
+<!--                    android:paddingEnd="8dp"-->
+<!--                    android:paddingBottom="8dp">-->
+
+<!--                    <View-->
+<!--                        android:id="@+id/animal6View"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:background="#F0CBDD" />-->
+
+<!--                    <LinearLayout-->
+<!--                        android:id="@+id/animalText6"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:layout_weight="0"-->
+<!--                        android:orientation="vertical">-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/animalName6"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="49dp"-->
+<!--                            android:fontFamily="sans-serif-black"-->
+<!--                            android:gravity="bottom"-->
+<!--                            android:paddingLeft="16dp"-->
+<!--                            android:text="MUMMY"-->
+<!--                            android:textColor="#3F3F3F"-->
+<!--                            android:textSize="24sp" />-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/animalType6"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="72dp"-->
+<!--                            android:paddingLeft="16dp"-->
+<!--                            android:text="Cat - Female (S)"-->
+<!--                            android:textColor="#3F3F3F" />-->
+
+<!--                        <LinearLayout-->
+<!--                            android:id="@+id/animalText6b"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:orientation="horizontal">-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/animalBreed6"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="match_parent"-->
+<!--                                android:layout_weight="1"-->
+<!--                                android:gravity="left|center_vertical"-->
+<!--                                android:paddingLeft="16dp"-->
+<!--                                android:paddingBottom="8dp"-->
+<!--                                android:text="Sphynx"-->
+<!--                                android:textColor="#3F3F3F"-->
+<!--                                android:textSize="18sp" />-->
+
+<!--                            <ImageView-->
+<!--                                android:id="@+id/heart6"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="match_parent"-->
+<!--                                android:layout_weight="3"-->
+<!--                                android:foregroundGravity="left"-->
+<!--                                android:paddingRight="16dp"-->
+<!--                                android:paddingBottom="8dp"-->
+<!--                                app:srcCompat="@drawable/heart_icon_empty" />-->
+
+<!--                        </LinearLayout>-->
+
+<!--                    </LinearLayout>-->
+<!--                </FrameLayout>-->
+<!--            </LinearLayout>-->
+<!--        </LinearLayout>-->
+<!--    </ScrollView>-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

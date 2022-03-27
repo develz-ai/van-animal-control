@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "671068802614",
+    "project_id": "vancouver-animal-control",
+    "storage_bucket": "vancouver-animal-control.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:671068802614:android:7ffbc3814f50c63ca3d297",
+        "android_client_info": {
+          "package_name": "com.example.vananimalcare"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "671068802614-kckqhmvdj03u9vb596cph6segn25nf8b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAE1mEqnZ6xdFB5d6l8FE_58at-qODv-qw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "671068802614-kckqhmvdj03u9vb596cph6segn25nf8b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
