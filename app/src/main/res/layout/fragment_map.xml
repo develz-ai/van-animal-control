@@ -4,69 +4,62 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/roundstyle"
+    android:backgroundTint="#FFE9DA"
     tools:context=".FragmentMap">
 
-    <FrameLayout
-        android:id="@+id/frameLayout3"
-        android:layout_width="350dp"
-        android:layout_height="150dp"
-        android:layout_gravity="center"
+    <TextView
+        android:id="@+id/shelterTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|left"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="25dp"
+        android:text="TextView"
+        android:textAlignment="textStart"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="RtlCompat" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="25dp"
+        android:gravity="center"
+        android:text="GET DIRECTIONS"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
-        <TextView
-            android:id="@+id/shelterTitle"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center|top|left"
-            android:layout_marginTop="20dp"
-            android:text="TextView"
-            android:textAlignment="textStart"
-            android:textSize="24dp"
-            android:textStyle="bold" />
-
-        <Button
-            android:id="@+id/button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|center"
-            android:layout_marginBottom="20dp"
-            android:gravity="center"
-            android:text="GET DIRECTIONS" />
-
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center|left"
-            android:layout_marginBottom="10dp"
-            app:srcCompat="@android:drawable/btn_star" />
-
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="100dp"
-            android:layout_height="32dp"
-            android:layout_gravity="right|top"
-            android:layout_marginTop="24dp"
-            android:visibility="invisible"
-            app:srcCompat="@drawable/heart_icon" />
-    </FrameLayout>
-
-    <FrameLayout
-        android:id="@+id/frameLayout2"
+    <ImageView
+        android:id="@+id/imageView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:layout_gravity="center|left"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/shelterTitle"
+        app:srcCompat="@android:drawable/btn_star" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="25dp"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed ante in turpis finibus finibus vitae ut tellus. Sed volutpat, ipsum quis egestas sodales, nulla quam ultricies purus, sed venenatis sem sapien vitae est. Integer ex neque, auctor ac semper non, semper luctus urna. "
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/frameLayout3">
-
-        <TextView
-            android:id="@+id/textView9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed ante in turpis finibus finibus vitae ut tellus. Sed volutpat, ipsum quis egestas sodales, nulla quam ultricies purus, sed venenatis sem sapien vitae est. Integer ex neque, auctor ac semper non, semper luctus urna. " />
-    </FrameLayout>
+        app:layout_constraintTop_toBottomOf="@+id/button" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
