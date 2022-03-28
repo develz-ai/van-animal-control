@@ -56,40 +56,14 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback {
         }
         task.addOnSuccessListener {
             if(it != null){
-                Toast.makeText(applicationContext, "${it.latitude} ${it.longitude}", Toast.LENGTH_SHORT). show()
+                Toast.makeText(applicationContext, "Current Location: ${it.latitude} ${it.longitude}", Toast.LENGTH_SHORT). show()
                 currentLat = (it.latitude)
                 currentLng = (it.longitude)
                 println(it.latitude)
                 println(it.longitude)
             }
         }
-
-
     }
-
-//    fun getDirectionURL(origin:LatLng, dest:LatLng) : String{
-//        return "https://maps.googleapis.com/maps/api/directions/json?origin=${origin.latitude},${origin.longitude}&destination=${dest.latitude},${dest.longitude}&sensor=false&mode=driving"
-//    }
-
-//    inner class GetDirection(val url : String) : AsyncTask<Void, Void, List<List<LatLng>>>(){
-//        override fun doInBackground(vararg p0: Void?): List<List<LatLng>> {
-//            val client = OkHttpClient()
-//            val request = Request.Builder().url(url).build()
-//            val response = client.newCall(request). execute()
-//            val data = response.body.toString()
-//            val result = ArrayList<List<LatLng>>()
-//
-//            try{
-//                val respObj =
-//            }catch (e:Exception){
-//
-//            }
-//            return result
-//        }
-//
-//    }
-
-
 
     override fun onMapReady(gMap: GoogleMap) {
         myMap = gMap!!
@@ -129,7 +103,7 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback {
             true
         }
 
-        myMap.addPolyline(PolylineOptions().clickable(true).add(currentLocation, vokra))
+        //myMap.addPolyline(PolylineOptions().clickable(true).add(currentLocation, vokra))
     }
 
 }
@@ -177,4 +151,26 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback {
 //            } else {
 //                println("nothing")
 //            }
+
+//    fun getDirectionURL(origin:LatLng, dest:LatLng) : String{
+//        return "https://maps.googleapis.com/maps/api/directions/json?origin=${origin.latitude},${origin.longitude}&destination=${dest.latitude},${dest.longitude}&sensor=false&mode=driving"
+//    }
+
+//    inner class GetDirection(val url : String) : AsyncTask<Void, Void, List<List<LatLng>>>(){
+//        override fun doInBackground(vararg p0: Void?): List<List<LatLng>> {
+//            val client = OkHttpClient()
+//            val request = Request.Builder().url(url).build()
+//            val response = client.newCall(request). execute()
+//            val data = response.body.toString()
+//            val result = ArrayList<List<LatLng>>()
+//
+//            try{
+//                val respObj =
+//            }catch (e:Exception){
+//
+//            }
+//            return result
+//        }
+//
+//    }
 
