@@ -1,5 +1,6 @@
 package com.example.vananimalcare
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.PersistableBundle
@@ -45,7 +46,9 @@ class animalListActivity : AppCompatActivity() {
                     animalRecyclerView.adapter = adapter
                     adapter.setOnItemClickListener(object : MyAdapter.onItemClickListerner{
                         override fun onItemclick(position: Int) {
-                            Toast.makeText(this@animalListActivity, "you clicked on item no. $position", Toast.LENGTH_SHORT).show()
+//                            Toast.makeText(this@animalListActivity, "you clicked on item no. $position", Toast.LENGTH_SHORT).show()
+                            val intent = Intent(this@animalListActivity, AnimalDetailsActivity::class.java)
+                            startActivity(intent)
                         }
 
                     })
