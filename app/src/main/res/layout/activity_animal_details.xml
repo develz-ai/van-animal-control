@@ -60,7 +60,7 @@
         app:layout_constraintTop_toBottomOf="@+id/frameLayout">
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/detailBreed"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#FFFFFF"
@@ -78,7 +78,7 @@
             android:paddingTop="16dp">
 
             <TextView
-                android:id="@+id/textView5"
+                android:id="@+id/detailColor"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="8dp"
@@ -92,7 +92,7 @@
                 android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/textView4"
+                android:id="@+id/detailSex"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"

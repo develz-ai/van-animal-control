@@ -2,8 +2,11 @@ package com.example.vananimalcare
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.PersistableBundle
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.vananimalcare.databinding.ActivityMainBinding
 import com.google.firebase.database.*
 
 class animalListActivity : AppCompatActivity() {
@@ -38,7 +41,14 @@ class animalListActivity : AppCompatActivity() {
                         animalArrayList.add(animal!!)
                     }
 
-                    animalRecyclerView.adapter = MyAdapter(animalArrayList)
+                    var adapter = MyAdapter(animalArrayList)
+                    animalRecyclerView.adapter = adapter
+                    adapter.setOnItemClickListener(object : MyAdapter.onItemClickListerner{
+                        override fun onItemclick(position: Int) {
+                            Toast.makeText(this@animalListActivity, "you clicked on item no. $position", Toast.LENGTH_SHORT).show()
+                        }
+
+                    })
                 }
             }
 
