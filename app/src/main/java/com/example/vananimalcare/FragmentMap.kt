@@ -13,6 +13,7 @@ import androidx.fragment.app.activityViewModels
 class FragmentMap : DialogFragment() {
 
     private val viewModel : FragmentViewModel by activityViewModels()
+    private val viewModelB : FragmentViewModelB by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -25,9 +26,13 @@ class FragmentMap : DialogFragment() {
             rootView.findViewById<TextView>(R.id.shelterTitle).text = it
         }
 
+        viewModelB.data.observe(viewLifecycleOwner){
+            rootView.findViewById<TextView>(R.id.shelterDesc).text = it
+        }
+
         rootView.findViewById<Button>(R.id.button).setOnClickListener {
             dismiss()
-
+            //plan to put pathfinding stuff here
         }
 
         return rootView

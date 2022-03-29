@@ -7,7 +7,8 @@
     <LinearLayout
         android:id="@+id/inventoryRow1"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="170dp"
+        android:background="#FFE9DA"
         android:orientation="horizontal"
         android:paddingStart="8dp"
         android:paddingEnd="8dp">
@@ -49,7 +50,7 @@
                 <TextView
                     android:id="@+id/animalType1"
                     android:layout_width="match_parent"
-                    android:layout_height="72dp"
+                    android:layout_height="42dp"
                     android:paddingLeft="16dp"
                     android:text="Dog - Male"
                     android:textColor="#EBEBEB" />
@@ -79,7 +80,7 @@
                         android:layout_weight="3"
                         android:foregroundGravity="left"
                         android:paddingRight="16dp"
-                        android:paddingBottom="8dp"
+                        android:paddingBottom="24dp"
                         app:srcCompat="@drawable/heart_icon" />
 
                 </LinearLayout>
@@ -87,80 +88,80 @@
             </LinearLayout>
 
         </FrameLayout>
-<!--        <FrameLayout-->
-<!--            android:id="@+id/animal2"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="match_parent"-->
-<!--            android:layout_weight="1"-->
-<!--            android:paddingStart="8dp"-->
-<!--            android:paddingTop="8dp"-->
-<!--            android:paddingEnd="8dp"-->
-<!--            android:paddingBottom="8dp">-->
+        <!--        <FrameLayout-->
+        <!--            android:id="@+id/animal2"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="match_parent"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:paddingStart="8dp"-->
+        <!--            android:paddingTop="8dp"-->
+        <!--            android:paddingEnd="8dp"-->
+        <!--            android:paddingBottom="8dp">-->
 
-<!--            <View-->
-<!--                android:id="@+id/animal2View"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:background="#FDD6B2" />-->
+        <!--            <View-->
+        <!--                android:id="@+id/animal2View"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:background="#FDD6B2" />-->
 
-<!--            <LinearLayout-->
-<!--                android:id="@+id/animalText2"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="match_parent"-->
-<!--                android:layout_weight="0"-->
-<!--                android:orientation="vertical">-->
+        <!--            <LinearLayout-->
+        <!--                android:id="@+id/animalText2"-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="match_parent"-->
+        <!--                android:layout_weight="0"-->
+        <!--                android:orientation="vertical">-->
 
-<!--                <TextView-->
-<!--                    android:id="@+id/animalName2"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="49dp"-->
-<!--                    android:fontFamily="sans-serif-black"-->
-<!--                    android:gravity="bottom"-->
-<!--                    android:paddingLeft="16dp"-->
-<!--                    android:text="BOB"-->
-<!--                    android:textColor="#3F3F3F"-->
-<!--                    android:textSize="24sp" />-->
+        <!--                <TextView-->
+        <!--                    android:id="@+id/animalName2"-->
+        <!--                    android:layout_width="match_parent"-->
+        <!--                    android:layout_height="49dp"-->
+        <!--                    android:fontFamily="sans-serif-black"-->
+        <!--                    android:gravity="bottom"-->
+        <!--                    android:paddingLeft="16dp"-->
+        <!--                    android:text="BOB"-->
+        <!--                    android:textColor="#3F3F3F"-->
+        <!--                    android:textSize="24sp" />-->
 
-<!--                <TextView-->
-<!--                    android:id="@+id/animalType2"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="72dp"-->
-<!--                    android:paddingLeft="16dp"-->
-<!--                    android:text="Cat - Male"-->
-<!--                    android:textColor="#3F3F3F" />-->
+        <!--                <TextView-->
+        <!--                    android:id="@+id/animalType2"-->
+        <!--                    android:layout_width="match_parent"-->
+        <!--                    android:layout_height="72dp"-->
+        <!--                    android:paddingLeft="16dp"-->
+        <!--                    android:text="Cat - Male"-->
+        <!--                    android:textColor="#3F3F3F" />-->
 
-<!--                <LinearLayout-->
-<!--                    android:id="@+id/animalText2b"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="match_parent"-->
-<!--                    android:orientation="horizontal">-->
+        <!--                <LinearLayout-->
+        <!--                    android:id="@+id/animalText2b"-->
+        <!--                    android:layout_width="match_parent"-->
+        <!--                    android:layout_height="match_parent"-->
+        <!--                    android:orientation="horizontal">-->
 
-<!--                    <TextView-->
-<!--                        android:id="@+id/animalBreed2"-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="match_parent"-->
-<!--                        android:layout_weight="1"-->
-<!--                        android:gravity="left|center_vertical"-->
-<!--                        android:paddingLeft="16dp"-->
-<!--                        android:paddingBottom="8dp"-->
-<!--                        android:text="Persian"-->
-<!--                        android:textColor="#3F3F3F"-->
-<!--                        android:textSize="18sp" />-->
+        <!--                    <TextView-->
+        <!--                        android:id="@+id/animalBreed2"-->
+        <!--                        android:layout_width="match_parent"-->
+        <!--                        android:layout_height="match_parent"-->
+        <!--                        android:layout_weight="1"-->
+        <!--                        android:gravity="left|center_vertical"-->
+        <!--                        android:paddingLeft="16dp"-->
+        <!--                        android:paddingBottom="8dp"-->
+        <!--                        android:text="Persian"-->
+        <!--                        android:textColor="#3F3F3F"-->
+        <!--                        android:textSize="18sp" />-->
 
-<!--                    <ImageView-->
-<!--                        android:id="@+id/heart2"-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="match_parent"-->
-<!--                        android:layout_weight="3"-->
-<!--                        android:foregroundGravity="left"-->
-<!--                        android:paddingRight="16dp"-->
-<!--                        android:paddingBottom="8dp"-->
-<!--                        app:srcCompat="@drawable/heart_icon_empty" />-->
+        <!--                    <ImageView-->
+        <!--                        android:id="@+id/heart2"-->
+        <!--                        android:layout_width="match_parent"-->
+        <!--                        android:layout_height="match_parent"-->
+        <!--                        android:layout_weight="3"-->
+        <!--                        android:foregroundGravity="left"-->
+        <!--                        android:paddingRight="16dp"-->
+        <!--                        android:paddingBottom="8dp"-->
+        <!--                        app:srcCompat="@drawable/heart_icon_empty" />-->
 
-<!--                </LinearLayout>-->
+        <!--                </LinearLayout>-->
 
-<!--            </LinearLayout>-->
-<!--        </FrameLayout>-->
+        <!--            </LinearLayout>-->
+        <!--        </FrameLayout>-->
 
 
     </LinearLayout>

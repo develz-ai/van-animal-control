@@ -26,15 +26,28 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback {
 
     lateinit var myMap: GoogleMap
 
+    val descriptions: MutableList <String> = mutableListOf()
+
+    fun populateData(){
+        descriptions.add("Animal Protection Organization")
+        descriptions.add("AT VOKRA, WE RESCUE, HEAL, THEN PLACE CATS - FIRST IN OUR NETWORK OF FOSTER HOMES, THEN IN CAREFULLY MATCHED, LOVING, FOREVER HOMES. WE’RE A PASSIONATE, VOLUNTEER-DRIVEN CHARITY WITH EXTENSIVE CAT CARE EXPERIENCE.")
+        descriptions.add("Our goal is to protect and safeguard the health of the community, while promoting responsible pet ownership.")
+        descriptions.add("Speaking for Animals")
+        descriptions.add("Have you ever worried about your pet? Have you been searching for a veterinarian you can trust?  Do you long to understand your pet better so you can become closer? Did you know that a proper wellness plan and feeding your pet a good diet determines their health for a lifetime? Most pet owners struggle with these same questions.  You’re not alone, and we’re here to help.")
+    }
+
     var currentLat = 0.0
     var currentLng = 0.0
 
     lateinit var fusedLocationProviderClient: FusedLocationProviderClient
     private val fragmentViewModel : FragmentViewModel by viewModels()
+    private val fragmentViewModelB : FragmentViewModelB by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_map)
+
+        populateData()
 
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this)
 
@@ -97,6 +110,22 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback {
         myMap.setOnMarkerClickListener { marker ->
 
             fragmentViewModel.setData(marker.title.toString())
+            if(marker.title.toString() == "CAARE"){
+                fragmentViewModelB.setData(descriptions[0])
+            }
+            else if(marker.title.toString() == "VOKRA - Vancouver Orphan Kitten Rescue"){
+                fragmentViewModelB.setData(descriptions[1])
+            }
+            else if(marker.title.toString() == "City of Vancouver Animal Services"){
+                fragmentViewModelB.setData(descriptions[2])
+            }
+            else if(marker.title.toString() == "BC SCPA Vancouver Community Animal Centre"){
+                fragmentViewModelB.setData(descriptions[3])
+            }
+            else if(marker.title.toString() == "Fraserview Veterinary Hospital"){
+                fragmentViewModelB.setData(descriptions[4])
+            }
+
 
             val dialog = FragmentMap()
             dialog.show(supportFragmentManager, "CustomDialog")

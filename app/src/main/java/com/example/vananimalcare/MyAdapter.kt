@@ -44,8 +44,6 @@ class MyAdapter(private val animalList : ArrayList<Animal>) : RecyclerView.Adapt
         mListener = listerner
     }
 
-
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.animal_item, parent, false)
         return MyViewHolder(itemView, mListener)
@@ -55,7 +53,7 @@ class MyAdapter(private val animalList : ArrayList<Animal>) : RecyclerView.Adapt
         val currentitem = animalList[position]
 //        val nextitem = animalList[position+1]
 
-        if (position%2 == 0) {
+        //if (position%2 == 0) {
             holder.name1.text = currentitem.Name
             holder.breed1.text = currentitem.Breed
             holder.sex1.text = currentitem.Sex
@@ -63,14 +61,12 @@ class MyAdapter(private val animalList : ArrayList<Animal>) : RecyclerView.Adapt
 //            holder.name2.text = nextitem.Name
 //            holder.breed2.text = nextitem.Breed
 //            holder.sex2.text = nextitem.Sex
-        }
+        //}
 
 
     }
 
     override fun getItemCount(): Int {
-
-
         return animalList.size
     }
 

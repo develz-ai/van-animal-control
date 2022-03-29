@@ -77,7 +77,7 @@
             android:layout_gravity="center">
 
             <TextView
-                android:id="@+id/textView9"
+                android:id="@+id/shelterDesc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed ante in turpis finibus finibus vitae ut tellus. Sed volutpat, ipsum quis egestas sodales, nulla quam ultricies purus, sed venenatis sem sapien vitae est. Integer ex neque, auctor ac semper non, semper luctus urna. " />

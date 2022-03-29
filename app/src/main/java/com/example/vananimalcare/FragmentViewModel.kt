@@ -10,3 +10,11 @@ class FragmentViewModel : ViewModel() {
         data.value = newData
     }
 }
+
+class FragmentViewModelB : ViewModel() {
+    val data = MutableLiveData<String>()
+
+    fun setData(newData : String){
+        data.value = newData
+    }
+}
