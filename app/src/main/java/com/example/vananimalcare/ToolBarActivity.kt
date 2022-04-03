@@ -15,18 +15,18 @@ class ToolBarActivity : AppCompatActivity() {
 
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.main_menu, menu)
-        return true
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        var itemView = item.itemId
-
-        when(itemView) {
-            R.id.app_bar_search -> Toast.makeText(applicationContext,"Search clicked", Toast.LENGTH_SHORT).show()
-            R.id.app_return -> Toast.makeText(applicationContext,"Return clicked", Toast.LENGTH_SHORT).show()
-        }
-        return false
-    }
+//    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+//        menuInflater.inflate(R.menu.main_menu, menu)
+//        return true
+//    }
+//
+//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+//        var itemView = item.itemId
+//
+//        when(itemView) {
+//            R.id.app_bar_search -> Toast.makeText(applicationContext,"Search clicked", Toast.LENGTH_SHORT).show()
+//            R.id.app_return -> Toast.makeText(applicationContext,"Return clicked", Toast.LENGTH_SHORT).show()
+//        }
+//        return false
+//    }
 }

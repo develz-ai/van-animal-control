@@ -3,14 +3,21 @@ package com.example.vananimalcare
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
 import android.view.View
+import android.widget.Toast
+import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.drawerlayout.widget.DrawerLayout
 import com.example.vananimalcare.databinding.ActivityMainBinding
+import com.google.android.material.navigation.NavigationView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     lateinit var binding: ActivityMainBinding
+
+    lateinit var toggle: ActionBarDrawerToggle
 
 //    companion object {
 //        lateinit var auth: FirebaseAuth
@@ -29,18 +36,31 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         binding = ActivityMainBinding.inflate(layoutInflater)
 
-
-
-
         val view = binding.root
         setContentView(view)
         println("start")
 
+        val drawerLayout : DrawerLayout = findViewById(R.id.drawerLayout)
+        val navView : NavigationView = findViewById(R.id.nav_view)
 
+        toggle = ActionBarDrawerToggle(this, drawerLayout, R.string.open, R.string.close)
+        drawerLayout.addDrawerListener(toggle)
+        toggle.syncState()
 
-//        binding.homeFrame1.setOnClickListener(this)
-//        binding.homeFrame2.setOnClickListener(this)
-//        binding.homeFrame3.setOnClickListener(this)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        navView.setNavigationItemSelectedListener {
+            when(it.itemId){
+                R.id.nav_home -> Toast.makeText(applicationContext, "Clicked Home",Toast.LENGTH_SHORT).show()
+                R.id.nav_adopt -> {val intent = Intent(this, animalListActivity::class.java)
+                    startActivity(intent)}
+                R.id.nav_prep -> {val intent = Intent(this, PrepActivity::class.java)
+                    startActivity(intent)}
+                R.id.nav_map -> {val intent = Intent(this, MapActivity::class.java)
+                    startActivity(intent)}
+            }
+            true
+        }
 
         val button1 = binding.homeFrame1
         button1.setOnClickListener{
@@ -65,6 +85,12 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 //        toolbar.show(supportFragmentManager, "CustomDialog")
 
     }
+
+//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+//        if(toggle.onOptionsItemSelected(item))
+//            return true
+//        }
+//    }
 
     override fun onClick(view: View?) {
         //val intent = Intent(this, InventoryActivity::class.java)
