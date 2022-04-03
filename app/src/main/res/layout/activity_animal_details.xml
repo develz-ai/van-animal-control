@@ -60,7 +60,7 @@
         app:layout_constraintTop_toBottomOf="@+id/frameLayout">
 
         <TextView
-            android:id="@+id/detailAnimal"
+            android:id="@+id/detailBreed"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#FFFFFF"
@@ -78,7 +78,7 @@
             android:paddingTop="16dp">
 
             <TextView
-                android:id="@+id/detailBreed"
+                android:id="@+id/detailColor"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="8dp"
@@ -126,7 +126,7 @@
             android:textSize="24sp" />
 
         <TextView
-            android:id="@+id/textView6"
+            android:id="@+id/AnimalDetail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed ante in turpis finibus finibus vitae ut tellus. Sed volutpat, ipsum quis egestas sodales, nulla quam ultricies purus, sed venenatis sem sapien vitae est. Integer ex neque, auctor ac semper non, semper luctus urna. "
@@ -134,7 +134,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/contactButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
