@@ -49,6 +49,7 @@ class animalListActivity : AppCompatActivity() {
                         override fun onItemclick(position: Int) {
                             //Toast.makeText(this@animalListActivity, "you clicked on item no. $position", Toast.LENGTH_SHORT).show()
                             val intent = Intent(this@animalListActivity, AnimalDetailsActivity::class.java)
+                            intent.putExtra("intVariableName", position.toString())
                             startActivity(intent)
                         }
                     })
