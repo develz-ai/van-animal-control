@@ -16,20 +16,7 @@ import com.google.firebase.database.DatabaseReference
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     lateinit var binding: ActivityMainBinding
-
     lateinit var toggle: ActionBarDrawerToggle
-
-//    companion object {
-//        lateinit var auth: FirebaseAuth
-//
-//        const val EMAIL = "test@oddinstitute.com"
-//        const val NAME = "Derek L"
-//        const val PASS = "StrongPass1234@"
-//    }
-
-
-
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,8 +27,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         setContentView(view)
         println("start")
 
-        val drawerLayout : DrawerLayout = findViewById(R.id.drawerLayout)
-        val navView : NavigationView = findViewById(R.id.nav_view)
+        val drawerLayout: DrawerLayout = findViewById(R.id.drawerLayout)
+        val navView: NavigationView = findViewById(R.id.nav_view)
 
         toggle = ActionBarDrawerToggle(this, drawerLayout, R.string.open, R.string.close)
         drawerLayout.addDrawerListener(toggle)
@@ -50,33 +37,44 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         navView.setNavigationItemSelectedListener {
-            when(it.itemId){
-                R.id.nav_home -> Toast.makeText(applicationContext, "Clicked Home",Toast.LENGTH_SHORT).show()
-                R.id.nav_adopt -> {val intent = Intent(this, animalListActivity::class.java)
-                    startActivity(intent)}
-                R.id.nav_prep -> {val intent = Intent(this, PrepActivity::class.java)
-                    startActivity(intent)}
-                R.id.nav_map -> {val intent = Intent(this, MapActivity::class.java)
-                    startActivity(intent)}
+            when (it.itemId) {
+                R.id.nav_home -> Toast.makeText(
+                    applicationContext,
+                    "Clicked Home",
+                    Toast.LENGTH_SHORT
+                ).show()
+                R.id.nav_adopt -> {
+                    val intent = Intent(this, animalListActivity::class.java)
+                    startActivity(intent)
+                }
+                R.id.nav_prep -> {
+                    val intent = Intent(this, PrepActivity::class.java)
+                    startActivity(intent)
+                }
+                R.id.nav_map -> {
+                    val intent = Intent(this, MapActivity::class.java)
+                    startActivity(intent)
+                }
             }
             true
         }
 
         val button1 = binding.homeFrame1
-        button1.setOnClickListener{
+        button1.setOnClickListener {
             val intent = Intent(this, animalListActivity::class.java)
             startActivity(intent)
         }
         val button2 = binding.homeFrame2
-        button2.setOnClickListener{
+        button2.setOnClickListener {
             val intent = Intent(this, PrepActivity::class.java)
             startActivity(intent)
         }
         val button3 = binding.homeFrame3
-        button3.setOnClickListener{
+        button3.setOnClickListener {
             val intent = Intent(this, MapActivity::class.java)
             startActivity(intent)
         }
+    }
 
 //        setContentView(R.layout.activity_toolbar)
 //        setSupportActionBar(findViewById(R.id.toolbar))
@@ -84,13 +82,15 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 //        var toolbar = ToolBarActivity()
 //        toolbar.show(supportFragmentManager, "CustomDialog")
 
-    }
 
-//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-//        if(toggle.onOptionsItemSelected(item))
-//            return true
-//        }
-//    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (toggle.onOptionsItemSelected(item)){
+            return true
+        }
+
+        return super.onOptionsItemSelected(item)
+    }
 
     override fun onClick(view: View?) {
         //val intent = Intent(this, InventoryActivity::class.java)
@@ -112,6 +112,14 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 //            val intent = Intent(this, MapActivity::class.java)
 //            startActivity(intent)
 //        }
+
+        //    companion object {
+//        lateinit var auth: FirebaseAuth
+//
+//        const val EMAIL = "test@oddinstitute.com"
+//        const val NAME = "Derek L"
+//        const val PASS = "StrongPass1234@"
+//    }
 
 
     }

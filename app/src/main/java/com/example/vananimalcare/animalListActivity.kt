@@ -5,9 +5,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.PersistableBundle
 import android.widget.Toast
+import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.drawerlayout.widget.DrawerLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.vananimalcare.databinding.ActivityMainBinding
+import com.google.android.material.navigation.NavigationView
 import com.google.firebase.database.*
 
 class animalListActivity : AppCompatActivity() {
@@ -15,8 +18,6 @@ class animalListActivity : AppCompatActivity() {
     private lateinit var dbref : DatabaseReference
     private lateinit var animalRecyclerView: RecyclerView
     private lateinit var animalArrayList: ArrayList<Animal>
-
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,6 +29,7 @@ class animalListActivity : AppCompatActivity() {
 
         animalArrayList = arrayListOf<Animal>()
         getAnimalData()
+
 
     }
 

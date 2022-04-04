@@ -156,7 +156,8 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/roundstyle"
                         android:scaleType="centerCrop"
-                        app:srcCompat="@drawable/dog_banner" />
+                        android:tint="#66000000"
+                        app:srcCompat="@drawable/pet_rabbit" />
 
                     <TextView
                         android:id="@+id/textLearn"
@@ -194,7 +195,8 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/roundstyle"
                         android:scaleType="centerCrop"
-                        app:srcCompat="@drawable/dog_banner" />
+                        android:tint="#66000000"
+                        app:srcCompat="@drawable/pet_bird" />
 
                     <TextView
                         android:id="@+id/textFind"
