@@ -38,11 +38,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         navView.setNavigationItemSelectedListener {
             when (it.itemId) {
-                R.id.nav_home -> Toast.makeText(
-                    applicationContext,
-                    "Clicked Home",
-                    Toast.LENGTH_SHORT
-                ).show()
+                R.id.nav_home -> {
+                    val intent = Intent(this, MainActivity::class.java)
+                    startActivity(intent)
+                }
                 R.id.nav_adopt -> {
                     val intent = Intent(this, animalListActivity::class.java)
                     startActivity(intent)
