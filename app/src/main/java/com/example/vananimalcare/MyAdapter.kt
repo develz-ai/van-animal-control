@@ -1,13 +1,17 @@
 package com.example.vananimalcare
 
 import android.app.Activity
+import android.content.Context
 import android.view.LayoutInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.database.ValueEventListener
 
 //class MyAdapter(private val context: Activity, private val arrayList: ArrayList<Animal>) : ArrayAdapter<Animal>(context, R.layout.list_item,arrayList) {
 //
@@ -32,7 +36,7 @@ import androidx.recyclerview.widget.RecyclerView
 //}
 
 
-class MyAdapter(private val animalList : ArrayList<Animal>) : RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
+class MyAdapter(val context: Context, private val animalList: ArrayList<Animal>) : RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
 
     private lateinit var mListener : onItemClickListerner
 
@@ -63,6 +67,21 @@ class MyAdapter(private val animalList : ArrayList<Animal>) : RecyclerView.Adapt
 //            holder.sex2.text = nextitem.Sex
         //}
 
+        if (position % 2 == 0) {
+            holder.cardViewItem.setBackgroundColor(
+                ContextCompat.getColor(
+                    context,
+                    R.color.brown
+                )
+            )
+        } else {
+            holder.cardViewItem.setBackgroundColor(
+                ContextCompat.getColor(
+                    context,
+                    R.color.lightbrown
+                )
+            )
+        }
 
     }
 
@@ -79,6 +98,8 @@ class MyAdapter(private val animalList : ArrayList<Animal>) : RecyclerView.Adapt
 //        val name2 : TextView = itemView.findViewById(R.id.animalName2)
 //        val breed2 : TextView = itemView.findViewById(R.id.animalBreed2)
 //        val sex2 : TextView = itemView.findViewById(R.id.animalType2)
+
+        val cardViewItem : View = itemView.findViewById(R.id.animal1View)
 
         init {
             itemView.setOnClickListener {

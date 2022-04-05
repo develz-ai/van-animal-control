@@ -1,25 +1,17 @@
 package com.example.vananimalcare
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.view.Menu
 import android.view.View
 import android.widget.*
-import androidx.appcompat.app.ActionBarDrawerToggle
-import androidx.drawerlayout.widget.DrawerLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.appcompat.widget.SearchView
-import com.example.vananimalcare.databinding.ActivityMainBinding
-import com.google.android.material.navigation.NavigationView
+import androidx.recyclerview.widget.GridLayoutManager
 import com.google.firebase.database.*
-import com.google.firebase.database.ktx.database
-import com.google.firebase.ktx.Firebase
 import java.util.*
-import java.util.jar.Attributes
 import kotlin.collections.ArrayList
 
 class animalListActivity : AppCompatActivity() {
@@ -42,7 +34,7 @@ class animalListActivity : AppCompatActivity() {
         setContentView(R.layout.activity_inventory)
 
         animalRecyclerView = findViewById(R.id.animalList)
-        animalRecyclerView.layoutManager = LinearLayoutManager(this)
+        animalRecyclerView.layoutManager = GridLayoutManager(this, 2)
         animalRecyclerView.setHasFixedSize(true)
 
         animalArrayList = arrayListOf<Animal>()
@@ -282,7 +274,7 @@ class animalListActivity : AppCompatActivity() {
 
                     tempArrayList.addAll(animalArrayList)
 
-                    var adapter = MyAdapter(tempArrayList)
+                    var adapter = MyAdapter(this@animalListActivity, tempArrayList)
                     animalRecyclerView.adapter = adapter
                     adapter.setOnItemClickListener(object : MyAdapter.onItemClickListerner{
                         override fun onItemclick(position: Int) {
