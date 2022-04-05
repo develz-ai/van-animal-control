@@ -23,28 +23,29 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="RtlCompat" />
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center|left"
-        android:layout_marginLeft="25dp"
-        android:layout_marginTop="5dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/shelterTitle"
-        app:srcCompat="@android:drawable/btn_star" />
+<!--    <ImageView-->
+<!--        android:id="@+id/imageView3"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="center|left"-->
+<!--        android:layout_marginLeft="25dp"-->
+<!--        android:layout_marginTop="5dp"-->
+<!--        android:visibility="invisible"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/shelterTitle"-->
+<!--        app:srcCompat="@android:drawable/btn_star" />-->
 
     <TextView
         android:id="@+id/shelterDesc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="25dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="25dp"
         android:layout_marginRight="25dp"
         android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed ante in turpis finibus finibus vitae ut tellus. Sed volutpat, ipsum quis egestas sodales, nulla quam ultricies purus, sed venenatis sem sapien vitae est. Integer ex neque, auctor ac semper non, semper luctus urna. "
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+        app:layout_constraintTop_toBottomOf="@+id/shelterTitle" />
 
     <Button
         android:id="@+id/button"

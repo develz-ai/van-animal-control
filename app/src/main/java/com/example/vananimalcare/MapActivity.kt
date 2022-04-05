@@ -29,11 +29,23 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback {
     val descriptions: MutableList <String> = mutableListOf()
 
     fun populateData(){
-        descriptions.add("Animal Protection Organization")
-        descriptions.add("AT VOKRA, WE RESCUE, HEAL, THEN PLACE CATS - FIRST IN OUR NETWORK OF FOSTER HOMES, THEN IN CAREFULLY MATCHED, LOVING, FOREVER HOMES. WE’RE A PASSIONATE, VOLUNTEER-DRIVEN CHARITY WITH EXTENSIVE CAT CARE EXPERIENCE.")
-        descriptions.add("Our goal is to protect and safeguard the health of the community, while promoting responsible pet ownership.")
-        descriptions.add("Speaking for Animals")
-        descriptions.add("Have you ever worried about your pet? Have you been searching for a veterinarian you can trust?  Do you long to understand your pet better so you can become closer? Did you know that a proper wellness plan and feeding your pet a good diet determines their health for a lifetime? Most pet owners struggle with these same questions.  You’re not alone, and we’re here to help.")
+        descriptions.add("ADDRESS: 1500 W Georgia St, Vancouver, BC V6G 2Z6 \n\n" +
+                "Animal Protection Organization \n\n" +
+                "CONTACT: (604) 780-4840")
+        descriptions.add("ADDRESS: 2028 Wall St, Vancouver, BC V5L 1B1 \n\n" +
+            "At VOKRA, we rescure, heal then place cats - first in our network of foster homes, then in carefully matched, " +
+                "loving, forever homes. We're a passionate, volunteer-driven community with extensive cat care experience. \n\n"+
+                "CONTACT: (604) 731-2913")
+        descriptions.add("1280 Raymur Ave, Vancouver, BC V6A 3L8 \n\n" +
+            "Our goal is to protect and safeguard the health of the community, while promoting responsible pet ownership.\n\n"+
+                "CONTACT: (604) 873-7000")
+        descriptions.add("ADDRESS: North building, 1205 E 7th Ave, Vancouver, BC V5T 1R1 \n\n" +
+            "Speaking for Animals \n\n"+
+                "CONTACT: (604) 879-7721")
+        descriptions.add("ADDRESS: 800 Hamilton St, Vancouver, BC V6B 6M2 \n\n" +
+            "NHDRS is a registered dog rescue organization based in British Columbia, Canada. We are committed to finding loving " +
+                "homes for stray or unwanted dogs and puppies from remote Canadian communities.\n\n"+
+                "WEB: northernhope.ca")
     }
 
     var currentLat = 0.0
@@ -85,7 +97,7 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback {
         val vokra = LatLng(49.2778326,-123.1000548)
         val van_animal_services = LatLng(49.2770792,-123.0904556)
         val scpa = LatLng(49.2693092,-123.0961574)
-        val fvh = LatLng(49.2241491,-123.0907452)
+        val nhdrs = LatLng(49.276861,-123.1179032)
         val currentLocation = LatLng(currentLat, currentLng)
 
         //val markerOptions0 : MarkerOptions = MarkerOptions().position(start).title("QEP")
@@ -93,7 +105,7 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback {
         val markerOptions2 : MarkerOptions = MarkerOptions().position(vokra).title("VOKRA - Vancouver Orphan Kitten Rescue")
         val markerOptions3 : MarkerOptions = MarkerOptions().position(van_animal_services).title("City of Vancouver Animal Services")
         val markerOptions4 : MarkerOptions = MarkerOptions().position(scpa).title("BC SCPA Vancouver Community Animal Centre")
-        val markerOptions5 : MarkerOptions = MarkerOptions().position(fvh).title("Fraserview Veterinary Hospital")
+        val markerOptions5 : MarkerOptions = MarkerOptions().position(nhdrs).title("Northern Hope Dog Rescue Society")
 
         val markerOptions0 : MarkerOptions = MarkerOptions().position(currentLocation).title("Current Location")
 
@@ -103,7 +115,7 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback {
         myMap.addMarker(markerOptions4)
         myMap.addMarker(markerOptions5)
 
-        myMap.addMarker(markerOptions0)
+        //myMap.addMarker(markerOptions0)
 
         myMap.animateCamera(CameraUpdateFactory.newLatLngZoom(start, 12.0f))
 
@@ -122,7 +134,7 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback {
             else if(marker.title.toString() == "BC SCPA Vancouver Community Animal Centre"){
                 fragmentViewModelB.setData(descriptions[3])
             }
-            else if(marker.title.toString() == "Fraserview Veterinary Hospital"){
+            else if(marker.title.toString() == "Northern Hope Dog Rescue Society"){
                 fragmentViewModelB.setData(descriptions[4])
             }
 
