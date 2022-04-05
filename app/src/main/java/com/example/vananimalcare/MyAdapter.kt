@@ -56,8 +56,8 @@ class MyAdapter(private val animalList : ArrayList<Animal>) : RecyclerView.Adapt
         //if (position%2 == 0) {
             holder.name1.text = currentitem.Name
             holder.breed1.text = currentitem.Breed
-            holder.sex1.text = currentitem.Sex
-//            holder.color1.text = currentitem.Color
+            holder.sex1.text = currentitem.Type
+            holder.color1.text = currentitem.Color
 //            holder.name2.text = nextitem.Name
 //            holder.breed2.text = nextitem.Breed
 //            holder.sex2.text = nextitem.Sex
@@ -75,7 +75,7 @@ class MyAdapter(private val animalList : ArrayList<Animal>) : RecyclerView.Adapt
         val name1 : TextView = itemView.findViewById(R.id.animalName1)
         val breed1 : TextView = itemView.findViewById(R.id.animalBreed1)
         val sex1 : TextView = itemView.findViewById(R.id.animalType1)
-//        val color1 : TextView = itemView.findViewById(R.id.detailColor)
+        val color1 : TextView = itemView.findViewById(R.id.animalColor1)
 //        val name2 : TextView = itemView.findViewById(R.id.animalName2)
 //        val breed2 : TextView = itemView.findViewById(R.id.animalBreed2)
 //        val sex2 : TextView = itemView.findViewById(R.id.animalType2)

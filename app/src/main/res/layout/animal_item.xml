@@ -50,10 +50,20 @@
                 <TextView
                     android:id="@+id/animalType1"
                     android:layout_width="match_parent"
-                    android:layout_height="42dp"
+                    android:layout_height="21dp"
                     android:paddingLeft="16dp"
                     android:text="Dog - Male"
                     android:textColor="#EBEBEB" />
+
+                <TextView
+                    android:id="@+id/animalColor1"
+                    android:layout_width="match_parent"
+                    android:layout_height="21dp"
+                    android:paddingLeft="16dp"
+                    android:text="Dog - Male"
+                    android:textColor="#EBEBEB" />
+
+
 
                 <LinearLayout
                     android:id="@+id/animalText1b"

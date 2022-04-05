@@ -46,11 +46,12 @@ class AnimalDetailsActivity : AppCompatActivity() {
                 val birthDate = it.child("Date").value
                 val name = it.child("Name").value
                 val gender = it.child("Sex").value
+                val type = it.child("Type").value
                 Toast.makeText(this, "Successfully linked", Toast.LENGTH_SHORT).show()
                 binding.detailBreed.text = breed.toString()
                 binding.animalDetailName.text = name.toString()
                 binding.detailSex.text = gender.toString()
-                binding.AnimalDetail.text = "This animal is born in ${birthDate.toString()}."
+                binding.AnimalDetail.text = "This animal is a marvelous ${type.toString()}. \n This animal is born in ${birthDate.toString()}."
                 binding.detailColor.text = color.toString()
 
 
