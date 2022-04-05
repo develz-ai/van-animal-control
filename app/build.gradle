@@ -69,4 +69,9 @@ dependencies {
     implementation 'com.google.firebase:firebase-auth:21.0.3'
 
     implementation 'com.google.firebase:firebase-database-ktx:20.0.4'
+
+    //ViewPager2
+    implementation 'androidx.viewpager2:viewpager2:1.1.0-beta01'
+    //Material Design
+    implementation 'com.google.android.material:material:1.6.0-beta01'
 }
