@@ -6,9 +6,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.PersistableBundle
 import android.view.Menu
-import android.widget.Button
-import android.widget.ImageButton
-import android.widget.Toast
+import android.view.View
+import android.widget.*
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -34,6 +33,8 @@ class animalListActivity : AppCompatActivity() {
     var animalType = ArrayList<String>()
     var animalColor = ArrayList<String>()
     var animalName = ArrayList<String>()
+    lateinit var breedFilter : Spinner
+    lateinit var colorFilter : Spinner
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -51,7 +52,26 @@ class animalListActivity : AppCompatActivity() {
 
         dbref = FirebaseDatabase.getInstance().getReference("Animals")
 
+        breedFilter = findViewById(R.id.spinner1) as Spinner
+        colorFilter = findViewById(R.id.spinner2) as Spinner
 
+        val breedOptions = arrayOf("Select Breed", "Labrador", "Bulldog", "Poodle")
+        var colorOptions = arrayOf("Select Color", "Black", "Golden", "White")
+
+        breedFilter.adapter = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,breedOptions)
+        colorFilter.adapter = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,colorOptions)
+
+//        breedFilter.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
+//            override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
+//                if (p2 == 0) {
+//                    Toast.makeText(this@animalListActivity,"you selected option 0", Toast.LENGTH_SHORT).show()
+//                }
+//            }
+//
+//            override fun onNothingSelected(p0: AdapterView<*>?) {
+//                TODO("Not yet implemented")
+//            }
+//        }
 
 
 //        loadArrayListItems()
@@ -104,7 +124,11 @@ class animalListActivity : AppCompatActivity() {
 //
 //    }
 
-
+    private fun clearFilter() {
+        tempArrayList.clear()
+        tempArrayList.addAll(animalArrayList)
+        animalRecyclerView.adapter!!.notifyDataSetChanged()
+    }
 
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -137,9 +161,7 @@ class animalListActivity : AppCompatActivity() {
 
                     animalRecyclerView.adapter!!.notifyDataSetChanged()
                 } else {
-                    tempArrayList.clear()
-                    tempArrayList.addAll(animalArrayList)
-                    animalRecyclerView.adapter!!.notifyDataSetChanged()
+                    clearFilter()
                 }
 
                 return false
@@ -148,6 +170,38 @@ class animalListActivity : AppCompatActivity() {
         })
 
         return super.onCreateOptionsMenu(menu)
+    }
+
+    private fun imageFilter(Str: String) {
+        tempArrayList.clear()
+        val type = Str + "s"
+        Toast.makeText(this@animalListActivity,"Only $type showing", Toast.LENGTH_SHORT).show()
+        animalArrayList.forEach {
+            if (it.Type.toString() == Str) {
+                tempArrayList.add(it)
+            }
+        }
+        animalRecyclerView.adapter!!.notifyDataSetChanged()
+    }
+
+    private fun spinnerFilter(Str: String) {
+        tempArrayList.clear()
+        animalArrayList.forEach {
+            if (it.Breed.toString().lowercase(Locale.getDefault()).contains(Str)) {
+                tempArrayList.add(it)
+            }
+        }
+        animalRecyclerView.adapter!!.notifyDataSetChanged()
+    }
+
+    private fun spinnerFilter2(Str: String) {
+        tempArrayList.clear()
+        animalArrayList.forEach {
+            if (it.Color.toString().lowercase(Locale.getDefault()).contains(Str)) {
+                tempArrayList.add(it)
+            }
+        }
+        animalRecyclerView.adapter!!.notifyDataSetChanged()
     }
 
     private fun getAnimalData() {
@@ -168,50 +222,62 @@ class animalListActivity : AppCompatActivity() {
                     val catFilter = findViewById<ImageButton>(R.id.imageCatFilter)
                     val birdFilter = findViewById<ImageButton>(R.id.imageBirdFilter)
                     val rabbitFilter = findViewById<ImageButton>(R.id.imageRabbitFilter)
-
+                    val clearButton = findViewById<Button>(R.id.clearButton)
 
                     dogFilter.setOnClickListener{
-                        tempArrayList.clear()
-                        Toast.makeText(this@animalListActivity,"Only Dogs showing", Toast.LENGTH_SHORT).show()
-                        animalArrayList.forEach {
-                            if (it.Type.toString() == "Dog") {
-                                tempArrayList.add(it)
-                            }
-                        }
-                        animalRecyclerView.adapter!!.notifyDataSetChanged()
+                        imageFilter("Dog")
                     }
 
                     catFilter.setOnClickListener{
-                        tempArrayList.clear()
-                        Toast.makeText(this@animalListActivity,"Only Cats showing", Toast.LENGTH_SHORT).show()
-                        animalArrayList.forEach {
-                            if (it.Type.toString() == "Cat") {
-                                tempArrayList.add(it)
-                            }
-                        }
-                        animalRecyclerView.adapter!!.notifyDataSetChanged()
+                        imageFilter("Cat")
                     }
 
                     birdFilter.setOnClickListener{
-                        tempArrayList.clear()
-                        Toast.makeText(this@animalListActivity,"Only Birds showing", Toast.LENGTH_SHORT).show()
-                        animalArrayList.forEach {
-                            if (it.Type.toString() == "Bird") {
-                                tempArrayList.add(it)
-                            }
-                        }
-                        animalRecyclerView.adapter!!.notifyDataSetChanged()
+                        imageFilter("Bird")
                     }
 
                     rabbitFilter.setOnClickListener{
-                        tempArrayList.clear()
-                        Toast.makeText(this@animalListActivity,"Only Rabbits showing", Toast.LENGTH_SHORT).show()
-                        animalArrayList.forEach {
-                            if (it.Type.toString() == "Rabbit") {
-                                tempArrayList.add(it)
+                        imageFilter("Rabbit")
+                    }
+
+                    clearButton.setOnClickListener{
+                        clearFilter()
+                    }
+
+                    breedFilter.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
+                        override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
+                            if (p2 == 1) {
+                                spinnerFilter("labrador")
+                            } else if (p2 == 2) {
+                                spinnerFilter("bulldog")
+                            } else if (p2 == 3) {
+                                spinnerFilter("poodle")
+                            } else {
+                                clearFilter()
                             }
                         }
-                        animalRecyclerView.adapter!!.notifyDataSetChanged()
+
+                        override fun onNothingSelected(p0: AdapterView<*>?) {
+                            TODO("Not yet implemented")
+                        }
+                    }
+
+                    colorFilter.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
+                        override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
+                            if (p2 == 1) {
+                                spinnerFilter2("black")
+                            } else if (p2 == 2) {
+                                spinnerFilter2("golden")
+                            } else if (p2 == 3) {
+                                spinnerFilter2("white")
+                            } else {
+                                clearFilter()
+                            }
+                        }
+
+                        override fun onNothingSelected(p0: AdapterView<*>?) {
+                            TODO("Not yet implemented")
+                        }
                     }
 
                     tempArrayList.addAll(animalArrayList)

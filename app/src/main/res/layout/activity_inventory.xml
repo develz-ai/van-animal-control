@@ -20,6 +20,7 @@
             android:id="@+id/dogFilter"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:paddingBottom="5dp"
             android:layout_weight="1">
 
             <ImageButton
@@ -40,6 +41,7 @@
                 android:layout_height="match_parent"
                 android:fontFamily="sans-serif-black"
                 android:gravity="bottom|center"
+                android:paddingBottom="5dp"
                 android:text="DOGS"
                 android:textSize="16sp" />
         </FrameLayout>
@@ -48,6 +50,7 @@
             android:id="@+id/catFilter"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:paddingBottom="5dp"
             android:layout_weight="1">
 
             <ImageButton
@@ -68,6 +71,7 @@
                 android:layout_height="match_parent"
                 android:fontFamily="sans-serif-black"
                 android:gravity="bottom|center"
+                android:paddingBottom="5dp"
                 android:text="CATS"
                 android:textSize="16sp" />
         </FrameLayout>
@@ -76,6 +80,7 @@
             android:id="@+id/birdFilter"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:paddingBottom="5dp"
             android:layout_weight="1">
 
             <ImageButton
@@ -96,6 +101,7 @@
                 android:layout_height="match_parent"
                 android:fontFamily="sans-serif-black"
                 android:gravity="bottom|center"
+                android:paddingBottom="5dp"
                 android:text="BIRDS"
                 android:textSize="16sp" />
         </FrameLayout>
@@ -104,6 +110,7 @@
             android:id="@+id/rabbitFilter"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:paddingBottom="5dp"
             android:layout_weight="1">
 
             <ImageButton
@@ -124,6 +131,7 @@
                 android:layout_height="match_parent"
                 android:fontFamily="sans-serif-black"
                 android:gravity="bottom|center"
+                android:paddingBottom="5dp"
                 android:text="RABBITS"
                 android:textSize="16sp" />
         </FrameLayout>
@@ -141,7 +149,30 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal"></LinearLayout>
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/spinner1"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="5dp" />
+
+            <Spinner
+                android:id="@+id/spinner2"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="5dp" />
+
+            <Button
+                android:id="@+id/clearButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="CLEAR" />
+
+        </LinearLayout>
     </LinearLayout>
 
     <View
