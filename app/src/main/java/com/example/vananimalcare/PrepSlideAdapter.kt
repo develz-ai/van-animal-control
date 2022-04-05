@@ -29,12 +29,12 @@ class PrepSlideAdapter (private val prepSlides: List<PrepSlide>) :
     inner class PrepSlideViewHolder(view: View) : RecyclerView.ViewHolder(view){
         private val textTitle = view.findViewById<TextView>(R.id.textTitle)
         private val textDescription = view.findViewById<TextView>(R.id.textDescription)
-        //private val imageIcon = view.findViewById<TextView>(R.id.imageSlideIcon)
+        private val imageIcon = view.findViewById<ImageView>(R.id.imageSlideIcon)
 
         fun bind(prepSlide: PrepSlide){
             textTitle.text = prepSlide.title
             textDescription.text = prepSlide.description
-            //imageIcon.setBackgroundResource(prepSlide.icon)
+            imageIcon.setImageResource(prepSlide.icon)
         }
     }
 }
